@@ -1,10 +1,10 @@
 {
   "name": "A4_W1_NodeNPM2",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "main.js",
   "scripts": {
     "test": "echo \"HOLA COMOESTAS SENOR\" ",
-    "start": "nodemon js/components/app.js"
+    "start": "node js/components/app.js"
   },
   "repository": {
     "type": "git",
