@@ -4,7 +4,8 @@
   "main": "main.js",
   "scripts": {
     "test": "echo \"HOLA COMOESTAS SENOR\" ",
-    "start-dev": "nodemon app",
+    "dev": "nodemon app",
+    "pee": "echo \"POOOOOO\" ",
     "start": "node app"
   },
   "repository": {
