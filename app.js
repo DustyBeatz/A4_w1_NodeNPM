@@ -1,47 +1,19 @@
-const http = require('http'); /// just like a php require
-const stream = require('fs');
+const express = require('express'); /// just like a php require
 
-// require is more or less like a js import
+const server = express();
 
-//const hostname = '127.0.0.1'; //this is localhost
-const port = process.env.PORT || 3000; //the port number
 
-const server = http.createServer((req, res) => {
-  res.statusCode = 200;
-  res.setHeader('Content-Type', 'text/html');
+server.get("/", (req, res) => {
+  console.log('git the home route');
+    res.send('your first express ass');
+})
 
-  let url = req.url; //localhost:3000/contact
-
-  switch (url) {
-    case "/contact":
-      stream.readFile('contact.html', null, ((err, data) => {
-          if (err) {
-            res.writeHead(404);
-            res.write('404 not found');
-            console.log('error 404 contact');
-          } else {
-            res.write(data);
-          }
-      }))
-      break;
-
-      case "/portfolio":
-      stream.readFile('portfolio.html', null, ((err, data) => {
-          if (err) {
-            res.writeHead(404);
-            res.write('404 not found');
-          } else {
-            res.write(data);
-          }
-      }))
-      break;
-
-      default: 
-      res.end('Hello WOOOOOOOOOORRRLLLLDD!');
-
-  }
-
+server.get("/contact", (req, res) => {
+  console.log('hit the contact');
+    res.send('hit that contact page son');
 });
+
+const port = process.env.PORT || 3000; //the port number
 
 server.listen(port, () => {
   console.log(`Server is now running at ${port}/`);
