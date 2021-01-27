@@ -1,0 +1,30 @@
+{
+  "name": "a4_w1_nodenpm2",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"HOLA COMOESTAS SENOR\" ",
+    "start": "node app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DustyBeatz/A4_w1_NodeNPM.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DustyBeatz/A4_w1_NodeNPM/issues"
+  },
+  "homepage": "https://github.com/DustyBeatz/A4_w1_NodeNPM#readme",
+  "description": "",
+  "dependencies": {
+    "gulp": "^4.0.2",
+    "mysql": "^2.18.1",
+    "underscore": "^1.12.0"
+  },
+  "devDependencies": {
+    "gulp-sass": "^4.1.0",
+    "nodemon": "^2.0.7"
+  }
+}
